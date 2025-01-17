@@ -52,4 +52,8 @@ class User extends Authenticatable
     public function responsibility(){
         return $this->belongsTo(Responsibility::class, 'responsibility_id', 'id');
     }
+
+    public function post(){
+        return $this->hasMany(Post::class);
+    }
 }
