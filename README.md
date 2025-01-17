@@ -27,4 +27,8 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 - [x] A **comment** belongs to a **post.**
 - [x] A **comment** belongs to a **user.**
 
+### Initial Schema
+
+![Database Schema](./documentations/images/db_original.png)
+
 # Admin Panel controls and views.
