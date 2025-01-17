@@ -4,6 +4,8 @@
 
 I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, extend, and use as you will deem it fit.
 
+![Database Schema](./documentations/images/landing_page.png)
+
 # Conceptual Framework
 
 ## Database: Tables.
