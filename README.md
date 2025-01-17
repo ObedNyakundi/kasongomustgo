@@ -24,7 +24,7 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 - [x] A **category** has one or many **posts.**
 - [x] A **post** belongs to a **category.**
 - [x] A **post** has one or many **comments.**
-- [ ] A **comment** belongs to a **post.**
-- [ ] A **comment** belongs to a **user.**
+- [x] A **comment** belongs to a **post.**
+- [x] A **comment** belongs to a **user.**
 
 # Admin Panel controls and views.
