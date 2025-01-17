@@ -86,7 +86,7 @@
                               <span class="frame2-text12">Latest Updates</span>
                             </div>
                             <img
-                              src="public/external/frame244-tl6e.svg"
+                              src="{{ asset('landing/public/external/frame244-tl6e.svg') }}"
                               alt="Frame244"
                               class="frame2-frame3"
                             />
@@ -275,17 +275,17 @@
                         </div>
                         <div class="frame2-container42">
                           <img
-                            src="public/external/frame2149-7r02.svg"
+                            src="{{ asset('landing/public/external/frame2149-7r02.svg') }}"
                             alt="Frame2149"
                             class="frame2-frame4"
                           />
                           <img
-                            src="public/external/frame2151-knfb.svg"
+                          src="{{ asset('landing/public/external/frame2151-knfb.svg') }}"
                             alt="Frame2151"
                             class="frame2-frame5"
                           />
                           <img
-                            src="public/external/frame2153-hak.svg"
+                          src="{{ asset('landing/public/external/frame2153-hak.svg') }}"
                             alt="Frame2153"
                             class="frame2-frame6"
                           />
@@ -297,7 +297,7 @@
                     <div class="frame2-container44">
                       <div class="frame2-container45">
                         <img
-                          src="public/external/frame28-3v5n.svg"
+                        src="{{ asset('landing/public/external/frame28-3v5n.svg') }}"
                           alt="Frame28"
                           class="frame2-frame7"
                         />
@@ -324,12 +324,12 @@
                       </div>
                       <div class="frame2-container52">
                         <img
-                          src="public/external/frame226-o5l.svg"
+                        src="{{ asset('landing/public/external/frame226-o5l.svg') }}"
                           alt="Frame226"
                           class="frame2-frame8"
                         />
                         <img
-                          src="public/external/frame229-u1k4.svg"
+                        src="{{ asset('landing/public/external/frame229-u1k4.svg') }}"
                           alt="Frame229"
                           class="frame2-frame9"
                         />
