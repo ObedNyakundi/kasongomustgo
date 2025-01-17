@@ -26,6 +26,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->favicon(asset('images/kasongo.png'))
             ->registration()
             ->login()
             ->colors([
