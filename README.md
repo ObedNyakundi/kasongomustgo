@@ -33,4 +33,4 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 # Admin Panel controls and views.
 
-- [ ] Landing Page Blade layout view implementation.
+- [ ] Landing Page blade layout view implementation.
