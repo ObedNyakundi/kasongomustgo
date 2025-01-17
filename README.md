@@ -1,16 +1,18 @@
 # Documentation for "_Kasongo Must Go_"
 
-Ahem! ...So, here is the documentation of "Kasongo Must Go" as implmented in Laravel. The original front-end design was done by [DKTJONATHAN](https://github.com/DKTJONATHAN/Ruto-Must-Go).
+[DKTJONATHAN](https://github.com/DKTJONATHAN/Ruto-Must-Go), started the "Kaongo Must Go" project, but needed aid in developing the ack end structures. Herein is my chipping in to make it a success.
+
+I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, extend, and use as you will deem it fit.
 
 # Conceptual Framework
 
 ## Database: Tables.
 
-1. Responsibilities [ ]
-2. Users [ ]
-3. Posts [ ]
-4. Categories [ ]
-5. Comments [ ]
+1. Responsibilities - [ ]
+2. Users - [ ]
+3. Posts - [ ]
+4. Categories - [ ]
+5. Comments - [ ]
 
 ## Defining Relationships.
 
