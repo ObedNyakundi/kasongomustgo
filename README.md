@@ -16,14 +16,14 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 ## Defining Relationships.
 
-- [ ] A **responsibility** has one or many **users.**
-- [ ] A **user** belongs to a **responsibility.**
-- [ ] A **user** has one or many **posts.**
-- [ ] A **user** has one or many **comment.**
-- [ ] A **post** belongs to a **user.**
-- [ ] A **category** has one or many **posts.**
-- [ ] A **post** belongs to a **category.**
-- [ ] A **post** has one or many **comments.**
+- [x] A **responsibility** has one or many **users.**
+- [x] A **user** belongs to a **responsibility.**
+- [x] A **user** has one or many **posts.**
+- [x] A **user** has one or many **comment.**
+- [x] A **post** belongs to a **user.**
+- [x] A **category** has one or many **posts.**
+- [x] A **post** belongs to a **category.**
+- [x] A **post** has one or many **comments.**
 - [ ] A **comment** belongs to a **post.**
 - [ ] A **comment** belongs to a **user.**
 
