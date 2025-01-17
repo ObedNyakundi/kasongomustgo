@@ -35,4 +35,9 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 # Admin Panel controls and views.
 
-- [ ] Landing Page blade layout view implementation.
+- [x] Landing Page blade layout view implementation.
+- [ ] Responsibility blade layout view implementation on Admin.
+- [ ] User blade layout view implementation on Admin.
+- [ ] Posts blade layout view implementation on Admin.
+- [ ] Category blade layout view implementation on Admin.
+- [ ] Comment blade layout view implementation on Admin.
