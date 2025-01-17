@@ -7,4 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Responsibility extends Model
 {
     protected $table = 'responsibilities';
+
+    protected $fillable = [
+      'name',  
+    ];
 }
