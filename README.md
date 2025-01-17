@@ -8,10 +8,10 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 ## Database: Tables.
 
-- [ ] Responsibilities table.
-- [ ] Users table.
-- [ ] Posts table.
-- [ ] Categories table.
+- [x] Responsibilities table.
+- [x] Users table.
+- [x] Posts table.
+- [x] Categories table.
 - [ ] Comments table.
 
 ## Defining Relationships.
