@@ -12,6 +12,8 @@ class Responsibility extends Model
       'name',  
     ];
 
+
+    //relationships
     public function user(){
       return $this->hasMany(User::class);
     }
