@@ -9,6 +9,9 @@
                         <div class="frame2-heading28">
                           <span class="frame2-text51">Ruto Must Go</span>
                         </div>
+
+                        <img style="width:40px; height:auto" src="{{ asset('images/kasongo_b.png') }}">
+
                       </div>
                       <div class="frame2-container46">
 
