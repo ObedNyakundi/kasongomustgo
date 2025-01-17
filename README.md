@@ -32,3 +32,5 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 ![Database Schema](./documentations/images/db_original.png)
 
 # Admin Panel controls and views.
+
+- [ ] Landing Page Blade layout view implementation.
