@@ -47,4 +47,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //relationships
+    public function responsibility(){
+        return $this->belongsTo(Responsibility::class, 'responsibility_id', 'id');
+    }
 }
