@@ -8,6 +8,12 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', function () {
+//original page before breaking it down
+Route::get('/original', function () {
     return view('landing');
+})->name('original');
+
+//new page after breaking it into components
+Route::get('/', function () {
+    return view('home');
 })->name('home');
