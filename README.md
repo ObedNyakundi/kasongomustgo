@@ -8,23 +8,23 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 ## Database: Tables.
 
-1. Responsibilities - [ ]
-2. Users - [ ]
-3. Posts - [ ]
-4. Categories - [ ]
-5. Comments - [ ]
+- [ ] Responsibilities table.
+- [ ] Users table.
+- [ ] Posts table.
+- [ ] Categories table.
+- [ ] Comments table.
 
 ## Defining Relationships.
 
 - [ ] A **responsibility** has one or many **users.**
-- [ ] A **user** belongs to a **responsibility**.
+- [ ] A **user** belongs to a **responsibility.**
 - [ ] A **user** has one or many **posts.**
 - [ ] A **user** has one or many **comment.**
-- [ ] A **post** belongs to a **user**.
+- [ ] A **post** belongs to a **user.**
 - [ ] A **category** has one or many **posts.**
-- [ ] A **post** belongs to a **category**.
+- [ ] A **post** belongs to a **category.**
 - [ ] A **post** has one or many **comments.**
-- [ ] A **comment** belongs to a **post**.
-- [ ] A **comment** belongs to a **user**
+- [ ] A **comment** belongs to a **post.**
+- [ ] A **comment** belongs to a **user.**
 
 # Admin Panel controls and views.
