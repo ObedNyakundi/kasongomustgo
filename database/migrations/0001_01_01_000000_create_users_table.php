@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->foreignId('responsibility_id')
+                            ->nullable()
+                            ->references('id')->on('responsibilities')
+                            ->onDelete('set null');
             $table->string('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
