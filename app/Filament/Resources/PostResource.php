@@ -85,6 +85,13 @@ class PostResource extends Resource
                     ->label('Select other tags:')
                     ->columnSpan('1/2'),
 
+                Forms\Components\ToggleButtons::make('is_featured')
+                    ->required()
+                    ->label('Is this a featured post?')
+                    ->boolean()
+                    ->grouped()
+                    ->columnSpan('1/2'),
+
                 Forms\Components\FileUpload::make('cover_image') 
                         ->image()
                         ->required()
@@ -120,6 +127,10 @@ class PostResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->label('Category'),
+
+                Tables\Columns\IconColumn::make('is_featured')
+                    ->label('Featured')
+                    ->boolean(),
 
                 Tables\Columns\TextColumn::make('tags')
                     ->searchable()
