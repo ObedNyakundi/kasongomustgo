@@ -44,9 +44,9 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 # Linking the frontend to the backend.
 
-- [ ] landing page controller.
-- [ ] Making the hero/featured section changeable.
-- [ ] displaying other featured posts.
-- [ ] displaying popular topics.
+- [x] landing page controller.
+- [x] Making the hero/featured section changeable.
+- [x] displaying other featured posts.
+- [x] displaying popular topics.
 
 # Conclusion and Regards.
