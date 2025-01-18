@@ -166,6 +166,8 @@ class PostResource extends Resource
                     ->onColor(fn ($record) => $record->slider_post ? 'danger' : 'success')
                     ->label('Put to Slider?'),
 
+                // Password: U$90Ni7xOdBr
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->searchable()
                     ->sortable()

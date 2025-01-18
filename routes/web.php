@@ -9,9 +9,11 @@ Route::get('/original', function () {
 })->name('original');
 
 //new page after breaking it into components
+/*
 Route::get('/', function () {
     return view('home');
 })->name('home');
+*/
 
 //route for handling the landing page
-Route::get('/home', [LandingPageController::class,'homepage'])->name('home.page');
+Route::get('/', [LandingPageController::class,'homepage'])->name('home');
