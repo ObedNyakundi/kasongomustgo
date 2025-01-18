@@ -31,13 +31,29 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('heading')
                     ->required()
                     ->label('Post Heading')
-                    ->placeholder('e.g. Kasongo Just did Blab Blab Blab...')
+                    ->placeholder('e.g. Gen Z Just did Blab Blab Blab...')
                     ->columnSpan(2)
-                    ->maxLength(255),
+                    ->maxLength(80),
 
                 Forms\Components\RichEditor::make('body')
                     ->label('Post Body')
-                    ->placeholder('e.g. Hey [firstname], We wish you a happy birthday. Or Hello [tenant], Please remember to pay your remaining balance of [balance] before Friday ...')
+                    ->toolbarButtons([
+                                'attachFiles',
+                                'blockquote',
+                                'bold',
+                                'bulletList',
+                                'h1',
+                                'h2',
+                                'h3',
+                                'italic',
+                                'link',
+                                'orderedList',
+                                'redo',
+                                'strike',
+                                'underline',
+                                'undo',
+                        ])
+                    ->placeholder('e.g. There was an out cry on thusday when ...')
                     ->fileAttachmentsDisk('attachments')
                     ->required()
                     ->columnSpan('full'),
@@ -94,13 +110,50 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('heading')
+                    ->searchable()
+                    ->sortable()
+                    ->words(7)
+                    ->label('Heading'),
+
+                Tables\Columns\TextColumn::make('category.name')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Category'),
+
+                Tables\Columns\TextColumn::make('tags')
+                    ->searchable()
+                    ->sortable()
+                    ->getStateUsing(function(Post $posts){
+                        $alltags= $posts->tags;
+                        $transitions= ' ';
+                        foreach($alltags as $tag){
+                            $singletag= Category::where('id', $tag)->first();
+                            $transitions .= $singletag->name.', ';
+                        }
+                        //strip the last ' -> ' from the string
+                        $transitions = substr($transitions, 0, -2);
+                        $transitions .= '.';
+                        return $transitions;
+                    })
+                    ->label('Tags'),
+
+                Tables\Columns\TextColumn::make('user.name')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Created By'),
+
+                Tables\Columns\TextColumn::make('created_at')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Created On'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

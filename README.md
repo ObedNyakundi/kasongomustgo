@@ -38,6 +38,6 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 - [x] Landing Page blade layout view implementation.
 - [x] Responsibility blade layout view implementation on Admin.
 - [x] User blade layout view implementation on Admin.
-- [ ] Posts blade layout view implementation on Admin.
-- [ ] Category blade layout view implementation on Admin.
+- [x] Posts blade layout view implementation on Admin.
+- [x] Category blade layout view implementation on Admin.
 - [ ] Comment blade layout view implementation on Admin.
