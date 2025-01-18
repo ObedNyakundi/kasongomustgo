@@ -41,3 +41,12 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 - [x] Posts blade layout view implementation on Admin.
 - [x] Category blade layout view implementation on Admin.
 - [ ] Comment blade layout view implementation on Admin.
+
+# Linking the frontend to the backend.
+
+- [ ] landing page controller.
+- [ ] Making the hero/featured section changeable.
+- [ ] displaying other featured posts.
+- [ ] displaying popular topics.
+
+# Conclusion and Regards.
