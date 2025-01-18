@@ -45,6 +45,13 @@ return [
             'throw' => false,
         ],
 
+        'attachments' => [
+                'driver' => 'local',
+                'root' => public_path('images/post_attachments'),
+                'url' => env('APP_URL').'/images/post_attachments',
+                'visibility' => 'public',
+            ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

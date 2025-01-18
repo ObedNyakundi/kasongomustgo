@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use Illuminate\Support\Facades\Auth;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Models\Post;
@@ -26,7 +27,24 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('heading')
+                    ->required()
+                    ->label('Post Heading')
+                    ->placeholder('e.g. Kasongo Just did Blab Blab Blab...')
+                    ->columnSpan(2)
+                    ->maxLength(255),
+
+                Forms\Components\RichEditor::make('body')
+                    ->label('Post Body')
+                    ->placeholder('e.g. Hey [firstname], We wish you a happy birthday. Or Hello [tenant], Please remember to pay your remaining balance of [balance] before Friday ...')
+                    ->fileAttachmentsDisk('attachments')
+                    ->required()
+                    ->columnSpan('full'),
+
+                Forms\Components\Hidden::make('created_by')
+                    ->default(Auth::user()->id)
+                    ->required()
+                    ->columnSpan(2),
             ]);
     }
 
