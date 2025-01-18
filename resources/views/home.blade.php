@@ -33,14 +33,12 @@
                             <h5>{{ $post->category->name }}</h5>
                             <h3>{{ $post->heading }}</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...
+                                {{ $post->post_summary }}
                             </p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
                 @endforeach
-
                 </div>
             </div>
             

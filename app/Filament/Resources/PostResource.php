@@ -31,9 +31,17 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('heading')
                     ->required()
                     ->label('Post Heading')
-                    ->placeholder('e.g. Gen Z Just did Blab Blab Blab...')
+                    ->placeholder('e.g. Economic Reforms.')
                     ->columnSpan(2)
                     ->maxLength(80),
+
+                Forms\Components\Textarea::make('post_summary')
+                    ->required()
+                    ->label('Post Summary')
+                    ->rows(3)
+                    ->placeholder('e.g. Understanding the impact of recent economic policies on daily life...')
+                    ->columnSpan(2)
+                    ->maxLength(150),
 
                 Forms\Components\RichEditor::make('body')
                     ->label('Post Body')

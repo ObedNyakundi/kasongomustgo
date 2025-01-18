@@ -15,6 +15,7 @@ class Post extends Model
         'cover_image',
         'created_by',
         'category_id',
+        'post_summary',
         'is_featured',
     ];
 

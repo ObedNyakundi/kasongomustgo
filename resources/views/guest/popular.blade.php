@@ -1,6 +1,12 @@
 <div class="frame4-top">
     <h1>popular topics</h1>
     <div class="frame4-top-section">
+        @if(!empty($categories))
+        @foreach($categories as $category)
+        <div class="card1"><a href="#">{{ $category->name }}</a></div>
+        @endforeach
+
+        @else
         <div class="card1"><a href="#">Abductions</a></div>
         <div class="card1"><a href="#">Economy</a></div>
         <div class="card1"><a href="#">Corruption</a></div>
@@ -11,5 +17,6 @@
         </div>
         <div class="card1"><a href="#">Education</a></div>
         <div class="card1"><a href="#">Health</a></div>
+        @endif
     </div>
 </div>
