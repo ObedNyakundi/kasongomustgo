@@ -10,7 +10,7 @@
                 <h1>{{ $onepost->heading }}</h1>
                     <p>{{ $onepost->post_summary }}</p>
                     <a href="#">
-                        <span>Read About It</span>
+                        <span>Learn More</span>
                         <span class="material-symbols-outlined"
                             >arrow_forward</span
                         >
