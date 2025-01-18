@@ -2,11 +2,6 @@
 use App\Http\Controllers\LandingPageController;
 use Illuminate\Support\Facades\Route;
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
 
 //original page before breaking it down
 Route::get('/original', function () {
@@ -17,3 +12,6 @@ Route::get('/original', function () {
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+//route for handling the landing page
+Route::get('/home', [LandingPageController::class,'homepage'])->name('home.page');

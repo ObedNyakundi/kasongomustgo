@@ -17,6 +17,34 @@
             <!-- end of hero section -->
             
             <!-- featured stories -->
+        @if(!empty($posts))
+            <div class="frame3">
+                <h1>Featured Stories</h1>
+                <div class="frame3-section">
+                @foreach($posts as $post)
+                    <div class="card">
+                        <div class="top">
+                            <img
+                                src="{{ asset('images/cover_images/'.$post->cover_image) }}"
+                                alt=""
+                            />
+                        </div>
+                        <div class="bottom">
+                            <h5>{{ $post->category->name }}</h5>
+                            <h3>{{ $post->heading }}</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...
+                            </p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                @endforeach
+
+                </div>
+            </div>
+            
+        @else
             <div class="frame3">
                 <h1>Featured Stories</h1>
                 <div class="frame3-section">
@@ -73,5 +101,6 @@
                     </div>
                 </div>
             </div>
+        @endif
             <!-- end of featured stories -->
 @endSection
