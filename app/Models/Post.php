@@ -11,10 +11,16 @@ class Post extends Model
     protected $fillable = [
         'heading',
         'body',
+        'tags',
         'cover_image',
         'created_by',
         'category_id',
         'is_featured',
+    ];
+
+    //create casts of json arrays below
+    protected $casts = [
+        'tags' => 'array',
     ];
 
     //relationships

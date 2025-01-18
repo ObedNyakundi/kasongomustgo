@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Models\Post;
+use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -40,6 +41,47 @@ class PostResource extends Resource
                     ->fileAttachmentsDisk('attachments')
                     ->required()
                     ->columnSpan('full'),
+
+                Forms\Components\Select::make('category_id')
+                    ->relationship('category', 'name')
+                    ->preload()
+                    ->searchable()
+                    ->createOptionForm([
+                            Forms\Components\TextInput::make('name')
+                            ->label('Category Name')
+                            ->required()
+                            ->placeholder('e.g. Politics, Abductions, etc.')
+                            ->columnSpan('full'),
+                        ])
+                    ->label('Select Post Category:')
+                    ->columnSpan('1/2')
+                    ->required(),
+
+                Forms\Components\Select::make('tags')
+                    ->getSearchResultsUsing(fn (string $search): array => Category::where('name', 'like', "%{$search}%")->limit(10)->pluck('name', 'id')->toArray())
+                    ->getOptionLabelUsing(fn ($value): ?string => User::find($value)?->name)
+                    ->preload()
+                    ->options(function (){
+                        return Category::all()->pluck('name', 'id')->toArray();
+                    })
+                    ->multiple()
+                    ->searchable()
+                    ->label('Select other tags:')
+                    ->columnSpan('1/2'),
+
+                Forms\Components\FileUpload::make('cover_image') 
+                        ->image()
+                        ->required()
+                        ->imageEditor()
+                        ->disk('cover_images')
+                        ->label('Select Cover Image: (Should be the best image)') 
+                        ->imageEditorAspectRatios([
+                            '16:16',
+                            '4:4',
+                            '1:1',
+                        ])
+                        ->panelLayout('grid')
+                        ->columnSpan('full'),
 
                 Forms\Components\Hidden::make('created_by')
                     ->default(Auth::user()->id)
