@@ -16,6 +16,7 @@ class Post extends Model
         'created_by',
         'category_id',
         'post_summary',
+        'slider_post',
         'is_featured',
     ];
 

@@ -136,9 +136,9 @@ class PostResource extends Resource
                     ->sortable()
                     ->label('Category'),
 
-                Tables\Columns\IconColumn::make('is_featured')
-                    ->label('Featured')
-                    ->boolean(),
+                Tables\Columns\ToggleColumn::make('is_featured')
+                    ->onColor(fn ($record) => $record->is_featured ? 'danger' : 'success')
+                    ->label('Featured?'),
 
                 Tables\Columns\TextColumn::make('tags')
                     ->searchable()
