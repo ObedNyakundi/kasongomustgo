@@ -17,13 +17,20 @@ class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Our Posts';
+    protected static ?string $label = 'Categories';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->label('Category Name')
+                    ->placeholder('e.g. Politics, Abductions, Fufua ICC, etc.')
+                    ->columnSpan(2)
+                    ->maxLength(255),
             ]);
     }
 
@@ -31,13 +38,17 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Category Name'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -57,8 +68,8 @@ class CategoryResource extends Resource
     {
         return [
             'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
+            //'create' => Pages\CreateCategory::route('/create'),
+            //'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }
 }
