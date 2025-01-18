@@ -1,7 +1,7 @@
 <div class="frame4-top">
     <h1>popular topics</h1>
     <div class="frame4-top-section">
-        @if(!empty($categories))
+        @if(!empty($categories) && count($categories)>0)
         @foreach($categories as $category)
         <div class="card1"><a href="#">{{ $category->name }}</a></div>
         @endforeach

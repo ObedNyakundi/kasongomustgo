@@ -4,6 +4,20 @@
               <!-- hero section -->
             <div class="frame2">
                 <div class="frame2-section">
+                @if(!empty($slider_post) && count($slider_post)>0)
+
+                @foreach($slider_post as $onepost)
+                <h1>{{ $onepost->heading }}</h1>
+                    <p>{{ $onepost->post_summary }}</p>
+                    <a href="#">
+                        <span>Read About It</span>
+                        <span class="material-symbols-outlined"
+                            >arrow_forward</span
+                        >
+                    </a>
+                @endforeach
+
+                @else
                     <h1>Ruto Must Go</h1>
                     <p>If Kenya must change, Ruto must go first</p>
                     <a href="#">
@@ -12,12 +26,13 @@
                             >arrow_forward</span
                         >
                     </a>
+                @endif
                 </div>
             </div>
             <!-- end of hero section -->
             
             <!-- featured stories -->
-        @if(!empty($posts))
+        @if(!empty($posts) && count($posts)>0)
             <div class="frame3">
                 <h1>Featured Stories</h1>
                 <div class="frame3-section">

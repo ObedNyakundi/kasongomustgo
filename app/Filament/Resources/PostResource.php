@@ -162,6 +162,10 @@ class PostResource extends Resource
                     ->sortable()
                     ->label('Created By'),
 
+                Tables\Columns\ToggleColumn::make('slider_post')
+                    ->onColor(fn ($record) => $record->slider_post ? 'danger' : 'success')
+                    ->label('Put to Slider?'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->searchable()
                     ->sortable()
