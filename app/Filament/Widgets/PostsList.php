@@ -43,8 +43,8 @@ class PostsList extends BaseWidget
                 Tables\Columns\TextColumn::make('tags')
                     ->searchable()
                     ->sortable()
-                    ->getStateUsing(function(Post $posts){
-                        $alltags= $posts->tags;
+                    ->getStateUsing(function(Post $post){
+                        $alltags= $post->tags;
                         $transitions= ' ';
                         foreach($alltags as $tag){
                             $singletag= Category::where('id', $tag)->first();
