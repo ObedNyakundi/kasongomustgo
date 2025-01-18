@@ -160,7 +160,7 @@ body .main-frame .frame2 .frame2-section a:hover {
 @media screen and (max-width: 40rem) {
   body .main-frame .frame2 {
     width: 100%;
-    height: 400px;
+    height: 75vh;
     background-image: url("../Assets/tq_gkuesghzdx-71l1500h.png");
     background-repeat: no-repeat;
     background-position: center;
