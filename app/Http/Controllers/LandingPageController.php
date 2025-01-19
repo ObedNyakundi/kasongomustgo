@@ -10,6 +10,7 @@ use App\Models\Category;
 
 class LandingPageController extends Controller
 {
+    //home page
     public function homepage(){
         $posts = Post::where('is_featured',true)->orderBy('created_at', 'desc')->take(3)->get();
         $categories = Category::take(8)->get();
@@ -22,4 +23,17 @@ class LandingPageController extends Controller
                 'slider_post' => $slider_post
             ]); 
     }
+
+    //single post
+    public function singlepost($postId){
+
+        $categories = Category::take(8)->get();
+        $post=Post::findOrFail($postId);
+
+        return view('single-post',[
+            'categories' => $categories,
+            'post'=>$post,
+        ]);
+    }
+
 }

@@ -50,7 +50,7 @@
                             <p>
                                 {{ $post->post_summary }}
                             </p>
-                            <a href="#">Read More</a>
+                            <a href="{{ route('single.post',$post->id) }}">Read More</a>
                         </div>
                     </div>
                 @endforeach

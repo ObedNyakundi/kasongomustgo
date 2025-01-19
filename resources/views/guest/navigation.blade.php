@@ -3,7 +3,8 @@
                     <span class="material-symbols-outlined menu" id="menu"
                         >menu</span>
                         
-                    <h2>Ruto Must Go</h2>
+                    <h2><a href="{{ route('home') }}" style="text-decoration: none;">
+                    Ruto Must Go Project</a></h2>
                 </div>
                 <div class="navbar-section2">
                     <ul>
@@ -12,6 +13,7 @@
                         <li><a href="#">Corruption</a></li>
                         <li><a href="#">Murders</a></li>
                         <li><a href="#">Abductions</a></li>
+                        <li><a href="#">Volunteer</a></li>
                     </ul>
                 </div>
                 <div class="navbar-section3">
