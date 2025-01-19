@@ -8,12 +8,5 @@ Route::get('/original', function () {
     return view('landing');
 })->name('original');
 
-//new page after breaking it into components
-/*
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-*/
-
 //route for handling the landing page
 Route::get('/', [LandingPageController::class,'homepage'])->name('home');
