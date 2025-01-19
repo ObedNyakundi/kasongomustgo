@@ -26,13 +26,25 @@ class LandingPageController extends Controller
 
     //single post
     public function singlepost($postId){
-
         $categories = Category::take(8)->get();
-        $post=Post::findOrFail($postId);
+        $post=Post::where('id',$postId)->get()->first();
 
         return view('single-post',[
             'categories' => $categories,
             'post'=>$post,
+        ]);
+    }
+
+    //single category
+    public function singlecategory($categoryId){
+        $categories = Category::take(8)->get();
+        $our_category=Category::findOrFail($categoryId);
+        $posts=Post::where('category_id',$categoryId)->get();
+
+        return view('single-category',[
+            'categories' => $categories,
+            'our_category'=>$our_category,
+            'posts'=>$posts,
         ]);
     }
 

@@ -3,7 +3,7 @@
     <div class="frame4-top-section">
         @if(!empty($categories) && count($categories)>0)
         @foreach($categories as $category)
-        <div class="card1"><a href="#">{{ $category->name }}</a></div>
+        <div class="card1"><a href="{{ route('single.category',$category->id) }}">{{ $category->name }}</a></div>
         @endforeach
 
         @else

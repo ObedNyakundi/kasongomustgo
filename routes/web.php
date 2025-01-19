@@ -12,4 +12,7 @@ Route::get('/original', function () {
 Route::get('/', [LandingPageController::class,'homepage'])->name('home');
 
 //route for handling a post request
-Route::get('/{postId}/post', [LandingPageController::class,'singlepost'])->name('single.post');
+Route::get('view/{postId}/post', [LandingPageController::class,'singlepost'])->name('single.post');
+
+////route for handling a post request
+Route::get('view/{categoryId}/category', [LandingPageController::class,'singlecategory'])->name('single.category');
