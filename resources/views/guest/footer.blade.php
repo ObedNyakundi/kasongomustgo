@@ -28,17 +28,17 @@
                         <ul>
                             <li>
                                 <a
-                                    href="https://www.facebook.com/jonathan.mwaniki.127"
+                                    href="#"
                                     ><span class="bi-facebook"></span
                                 ></a>
                             </li>
                             <li>
-                                <a href="https://x.com/Maestropuns"
+                                <a href="#"
                                     ><span class="bi-twitter"></span
                                 ></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/jonaahrojo/"
+                                <a href="#"
                                     ><span class="bi-instagram"></span
                                 ></a>
                             </li>
