@@ -6,6 +6,23 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 
 ![Database Schema](./documentations/images/landing_page.png)
 
+# How to install
+- Download the project files into a folder or use `git clone https://github.com/ObedNyakundi/kasongomustgo`.
+- Open terminal in the project folder. In some Linux distros, you might need to grant permissions to the project. Do so with:
+ ` sudo chmod -R 755 ./`
+- Install project dependencies using:
+ `composer install`
+- Update the `.env` file or recreate it.
+- Generate the application key:
+ `php artisan key:generate`
+- Run the database server (optional for those using sqlite)
+- Run laravel server 
+ `php artisan serve`
+- Make database migrations.
+ `php artisan migrate`
+ **Have some fun!**
+
+The sections below are for technical uses
 # Conceptual Framework
 
 ## Database: Tables.
@@ -50,3 +67,5 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
 - [x] displaying popular topics.
 
 # Conclusion and Regards.
+- [DKTJONATHAN](https://github.com/DKTJONATHAN)
+- [Yours Truly...](https://github.com/ObedNyakundi)
