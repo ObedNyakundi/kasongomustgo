@@ -20,6 +20,12 @@ I Used PHP/Laravel (v 11.5) to develop the back end. Please feel free to fork, e
  `php artisan serve`
 - Make database migrations.
  `php artisan migrate`
+ 
+
+ ## Special Note:
+ All files under `./documentation` and this `readme.md` can be safely deleted. 
+ Also, all images in the folder `./public/images/cover_images` and `./public/images/post_attachments` can be safely deleted for the initial installation.
+
  **Have some fun!**
 
 The sections below are for technical uses
