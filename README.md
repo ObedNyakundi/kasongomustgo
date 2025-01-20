@@ -72,6 +72,25 @@ The sections below are for technical uses
 - [x] displaying other featured posts.
 - [x] displaying popular topics.
 
+# Gallery Images.
+## Dashboard (Admin)
+![Dashboard](./documentations/images/dashboard.png)
+
+## Table View (admin)
+![Table](./documentations/images/table.png)
+
+## Form View (admin)
+![form view](./documentations/images/form.png)
+
+## Image Editor (admin)
+![image editor](./documentations/images/image_editor.png)
+
+## A Category Page (Blog)
+![Categories page](./documentations/images/categories.png)
+
+## A Single Post Page (Blog)
+![Single Post page](./documentations/images/single_post.png)
+
 # Conclusion and Regards.
 - [DKTJONATHAN](https://github.com/DKTJONATHAN)
 - [Yours Truly...](https://github.com/ObedNyakundi)

@@ -28,7 +28,7 @@ class PostsList extends BaseWidget
                 Tables\Columns\TextColumn::make('heading')
                     ->searchable()
                     ->sortable()
-                    ->words(7)
+                    ->words(4)
                     ->label('Heading'),
 
                 Tables\Columns\TextColumn::make('category.name')
