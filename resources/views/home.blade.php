@@ -1,5 +1,13 @@
 @extends('guest.layout')
 
+@section('custom-styles')
+    <style type="text/css">
+        body .main-frame .frame3 .frame3-section {
+            display:flex;
+        }
+    </style>
+@endsection
+
 @section('content')
               <!-- hero section -->
             <div class="frame2">
@@ -33,11 +41,11 @@
             
             <!-- featured stories -->
         @if(!empty($posts) && count($posts)>0)
-            <div class="frame3">
+            <div class="frame3 container">
                 <h1>Featured Stories</h1>
-                <div class="frame3-section">
+                <div class="frame3-section row">
                 @foreach($posts as $post)
-                    <div class="card">
+                    <div class="card col-md-3 col-sm-6">
                         <div class="top">
                             <img
                                 src="{{ asset('images/cover_images/'.$post->cover_image) }}"
