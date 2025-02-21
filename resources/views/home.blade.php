@@ -43,22 +43,24 @@
         @if(!empty($posts) && count($posts)>0)
             <div class="frame3 container">
                 <h1>Featured Stories</h1>
-                <div class="frame3-section row">
+                <div class="frame3-section row" style="gap:0px !important;">
                 @foreach($posts as $post)
-                    <div class="card col-md-3 col-sm-6">
-                        <div class="top">
-                            <img
-                                src="{{ asset('images/cover_images/'.$post->cover_image) }}"
-                                alt=""
-                            />
-                        </div>
-                        <div class="bottom">
-                            <h5>{{ $post->category->name }}</h5>
-                            <h3>{{ $post->heading }}</h3>
-                            <p>
-                                {{ $post->post_summary }}
-                            </p>
-                            <a href="{{ route('single.post',$post->id) }}">Read More</a>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <div class="top">
+                                <img
+                                    src="{{ asset('images/cover_images/'.$post->cover_image) }}"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="bottom">
+                                <h5>{{ $post->category->name }}</h5>
+                                <h3>{{ $post->heading }}</h3>
+                                <p>
+                                    {{ $post->post_summary }}
+                                </p>
+                                <a href="{{ route('single.post',$post->id) }}">Read More</a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
