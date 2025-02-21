@@ -18,7 +18,7 @@
                 <div style="text-align:center;">
                     <h1>Stories about {{ $our_category->name }}</h1>
                 </div>
-                
+
                 <div class="frame3-section row">
                 @foreach($posts as $post)
                     <div class="card col-md-4 col-sm-6">
@@ -48,5 +48,5 @@
 
             </div>
         @endif
-
+        
 @endsection
